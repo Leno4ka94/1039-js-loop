@@ -46,6 +46,43 @@ function createArray() {
   }
   const arr = [11, 15, 1, 2, 2, 3, 4, 5];
   findUnique(arr);
-  
 
+
+
+  //Added Tasks after retro
+
+  //Second Task
+
+  function getNumber(a, b){
+    const arr = [];
+    for ( let i = a; i <= b; ++i ) {
+      for ( let k = a; k <= i; ++k ) {
+        arr.push(i);
+      }
+    }
+    console.log(arr.join(","));
+  }
+  getNumber(2, 5);
+
+
+  //Forth Task
+  function compact(arr) {
+    return [...new Set(arr)];
+  }
+  const arr = [5, 3, 4, 5,6,7,3];
+  console.log(compact(arr));
+
+  //Fixth Task
+  const array = [5, "Limit", 12, "a", "3", 99, 2, [2, 4, 3, "33", "a", "text"], "strong", "broun"];
+  function funcName(arr) {
+    const newArr = arr.flat(); 
+    const numArr = newArr.filter((elem) => {
+      return typeof elem === 'number';
+    });
+    const strArr = newArr.filter((elem) => {
+      return typeof elem === 'string';
+    });
+    return [numArr, strArr]
+  }
   
+  console.log(funcName(array));
